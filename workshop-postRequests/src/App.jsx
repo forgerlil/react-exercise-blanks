@@ -1,5 +1,5 @@
 import Instructions from './instructions/Instructions';
-import NewPost from './components/NewPost';
+import CreatePost from './components/CreatePost';
 import BlogPost from './components/BlogPost';
 
 export default function App() {
@@ -9,7 +9,7 @@ export default function App() {
     <div className='App'>
       <Instructions />
       <div className='block'>
-        <NewPost />
+        <CreatePost />
       </div>
       <div className='block postsWrapper'>Insert all posts here</div>
     </div>

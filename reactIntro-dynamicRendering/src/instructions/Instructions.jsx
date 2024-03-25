@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ExampleOutcome from './ExampleOutcome';
 import Level1 from './Level1';
 import Level2 from './Level2';
+import Level3 from './Level3';
 import Bonus from './Bonus';
 
 const Instructions = () => {
@@ -10,7 +11,8 @@ const Instructions = () => {
   const componentMap = {
     1: <Level1 />,
     2: <Level2 />,
-    3: <Bonus />,
+    3: <Level3 />,
+    4: <Bonus />,
   };
 
   const handleNext = () => {
@@ -30,20 +32,22 @@ const Instructions = () => {
   return (
     <div className='block'>
       <div className='goal'>
-        <h1>React POST requests</h1>
+        <h1>React Dynamic Component Rendering</h1>
         <p>
-          Now that we explored how to get data from an API to read and display
-          in our applications, it&apos;s time our applications <b>send data</b>{' '}
-          over to the API to create a new resource!
+          Data used in more complex applications also has more complex
+          structures - often in the form of an <b>array of objects</b>, each
+          representing an user, a product, or any other kind of data relevant to
+          your application. <b>Generating JSX dynamically</b> enables
+          scalability and modularity in your applications.
         </p>
-        <b>Your goal</b>: Send data to an API to create new resources and
-        display the new resource in the viewport.
+        <b>Your goal</b>: Render components iteratively and hand down data with
+        props.
         <ExampleOutcome />
       </div>
       <h3>
         Level {activeComponent} / {Object.keys(componentMap).length}
       </h3>
-      <div className='levels example'>
+      <div>
         <button onClick={handleBack} hidden={activeComponent === 1}>
           {`< Level ${activeComponent - 1}`}
         </button>
@@ -60,49 +64,41 @@ const Instructions = () => {
           className='link'
           rel='noopener noreferrer'
           target='_blank'
-          href='https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods'
+          href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map'
         >
-          HTTP request methods
+          The .map() method
         </a>
         <a
           className='link'
           rel='noopener noreferrer'
           target='_blank'
-          href='https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#uploading_json_data'
+          href='https://react.dev/learn/rendering-lists'
         >
-          Sending data with POST
+          Rendering elements iteratively
         </a>
         <a
           className='link'
           rel='noopener noreferrer'
           target='_blank'
-          href='https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#checking_that_the_fetch_was_successful'
+          href='https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key'
         >
-          Fetch error handling
+          The key property
         </a>
         <a
           className='link'
           rel='noopener noreferrer'
           target='_blank'
-          href='https://github.com/axios/axios?tab=readme-ov-file#example'
+          href='https://dmitripavlutin.com/javascript-object-destructuring/#1-the-need-for-object-destructuring'
         >
-          Axios library
+          Object destructuring
         </a>
         <a
           className='link'
           rel='noopener noreferrer'
           target='_blank'
-          href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function'
+          href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters#description'
         >
-          Async
-        </a>
-        <a
-          className='link'
-          rel='noopener noreferrer'
-          target='_blank'
-          href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await'
-        >
-          Await
+          Rest parameters
         </a>
       </div>
     </div>

@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import exampleOutcome from './exampleOutcome.gif';
-import exampleOutcome2 from './exampleOutcome2.gif';
+import exampleOutcome from './exampleOutcome.png';
 
 const ExampleOutcome = () => {
   const [showExample, setShowExample] = useState(false);
@@ -15,11 +14,6 @@ const ExampleOutcome = () => {
           <img
             className='exampleImg'
             src={exampleOutcome}
-            alt='Example outcome'
-          />
-          <img
-            className='exampleImg'
-            src={exampleOutcome2}
             alt='Example outcome'
           />
         </div>

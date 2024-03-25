@@ -1,4 +1,4 @@
-const NewPost = () => {
+const CreatePost = () => {
   return (
     <form>
       <fieldset>
@@ -23,4 +23,4 @@ const NewPost = () => {
   );
 };
 
-export default NewPost;
+export default CreatePost;
