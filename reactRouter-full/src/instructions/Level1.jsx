@@ -14,9 +14,8 @@ const Level1 = () => {
           <ul>
             <li>
               You can use the <b>getStudents</b> function from the{' '}
-              <b>services/students.js</b> file. You can optionally pass a number
-              as argument with the amount of students to be retrieved, and
-              returns a Promise that resolves to an array of student objects.
+              <b>services/students.js</b> file. It returns a Promise that
+              resolves to an array of 10 student objects.
             </li>
           </ul>
         </li>
@@ -31,7 +30,7 @@ const Level1 = () => {
             </li>
             <li>
               You can use the <b>getSingleStudent</b> function from{' '}
-              <b>services/students.js</b> file to retreive one student based on
+              <b>services/students.js</b> file to retrieve one student based on
               their uuid. It returns a Promise that resolves to a single
               student.
             </li>
