@@ -1,6 +1,7 @@
 import Instructions from './instructions/Instructions';
 
 function App() {
+  const url = 'https://ron-swanson-quotes.herokuapp.com/v2/quotes'
   return (
     <div className='App'>
       <Instructions />

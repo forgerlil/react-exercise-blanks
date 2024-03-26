@@ -21,7 +21,7 @@ const Instructions = () => {
       </div>
       <h3>Level 1</h3>
       <ul>
-        <li>Retrieve a quote from the API.</li>
+        <li>Retrieve a quote from the <a href='https://ron-swanson-quotes.herokuapp.com/v2/quotes' target='_blank'>API</a>.</li>
         <li>Change the quote every 30 seconds.</li>
       </ul>
       <div className='linkWrapper'>
